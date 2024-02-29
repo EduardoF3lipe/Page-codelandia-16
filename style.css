@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; text-decoration: none; border: none; list-style: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+}
+
+
+body,html {
+    scroll-behavior: smooth;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    color: var(--dark);
+
+
+}
+
+/* colors */
+
+:root {
+    --bg:  #FFE9E8;
+    --bg-10: #FFD5D3;
+    --brand: #CD3C32;
+    --dark: #121214;
+    --white: #ffffff;
+    --gray-scroolbar: #b1b1b1;
+}
+
+img , svg {
+    width: 100%;
+}
+
+/* ======================================================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bg-section {
+    background-color: var(--bg);
+}
+
+.header {
+    background-color: var(--bg);
+    padding: 55px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-text .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header .header-text .logo h3 {
+    font-size: 20px;
+    font-weight: 500;    
+}
+
+.header .header-text .logo img {
+    width: 5%;
+}
+
+.header .header-text h1 {
+    font-size: 45px;
+    margin-top: 35px;
+
+}
+
+.header .header-text span {
+    color: var(--brand);
+}
+
+.header .header-text p {
+    margin-top: 20px;
+    Line-height: 30px;
+    font-size: 18px;
+}
+
+
+.btn-donation {
+    padding: 14px 32px;
+    background-color: var(--brand);
+    border-radius: 4px;
+    margin-top: 20px;
+    color: var(--white);
+    cursor: pointer;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 17px;
+    transition: .3s ease;
+}
+
+.btn-donation:hover {
+    transform: scale(1.1);
+}
+
+.header-img {
+    max-width: 460px;
+
+}
+
+/* ======================================================================== */
+
+.time {
+    padding: 50px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.time-cownt h2 {
+    font-size: 40px;
+}
+
+.time-cownt p {
+    font-size: 18px;
+    max-width: 477px;
+    margin-top: 30px;
+    line-height: 30px;
+    display: inline-block;
+}
+
+.time img {
+    max-width: 450px;
+    margin-top: 30px;
+}
+
+
+.box-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    color: var(--brand);
+    font-size: 55px;
+    margin-top: 30px;
+    font-weight: 600;
+    padding: 0 40px;
+}
+
+/* seleciona o 2° elemento span de cada box */
+.box-content strong{
+    font-size: 25px;
+    color: var(--bg-10);
+    padding-left: 5px;
+  }
+
+
+
+/* ======================================================================== */
+
+
+.donations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+    padding: 50px 0;
+    margin-top: 30px;
+}
+
+.donations-right {
+    max-width: 602px;
+    padding-left: 100px;
+}
+
+.donations-left img {
+    max-width: 450px;
+    padding: 0;
+}
+
+.donations-right h3 {
+    font-size: 30px;
+}
+
+.donations-right p {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    max-width: 500px;
+    line-height: 30px;
+    display: inline-block;
+}
+
+/* ======================================================================== */
+
+footer {
+    background-color: var(--bg);
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer-list li {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--bg-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s ease;
+}
+
+.footer-list li:hover {
+    transform: translateY(-10px);
+}
+
+.footer-list i {
+    color: var(--brand);
+    font-size: 23px;
+    padding: 10px;
+}
+
+footer .logo {
+    color: var(--brand);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* ======================================================================== */
+/* Media querie */
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+
+    .header .header-text .logo h3 {
+        font-size: 25px;
+    }
+
+    img, svg {
+        width: 90%;
+    }
+
+    .header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .header-text h1 {
+        font-size: 38px;
+    }
+
+    .header .header-text .logo {
+        justify-content: center;
+    }
+
+    .header .header-text p {
+        font-size: 20px;
+    
+    }
+
+    .header-img {
+        margin-top: 100px;
+        max-width: 470px;
+    }
+
+    .time {
+        padding: 70px 0;
+    }
+
+    .time-cownt h3 {
+        font-size: 40px;
+    }
+
+    .donations {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    footer div {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-list {
+        gap: 25px;
+    }
+
+    .footer-list i {
+        font-size: 30px;
+    }
+
+    .donations-right {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .btn-donation {
+        width: 60%;
+    
+    }
+
+}
+
+
+@media screen and (max-width: 590px) {
+
+    .header .header-text .logo h3 {
+        font-size: 20px;
+    }
+
+    .header .header-text h1 {
+        font-size: 32px;
+    }
+
+    .header .header-text p {
+        font-size: 20px;
+        Line-height: 25px;
+    
+    }
+
+    .time-cownt h3 {
+        font-size: 40px;
+        letter-spacing: 0;
+    }
+
+    .time-cownt p {
+        font-size: 16px;
+        padding: 0 5px;
+    }
+
+    .time-cownt h2 {
+        font-size: 35px;
+    }
+
+    .donations-right h3 {
+        font-size: 28px;
+    }
+
+    .donations-right p {
+        font-size: 16px;
+    }
+
+
+    .btn-donation {
+        width: 100%;
+    
+    }
+
+    .box-content {
+        font-size: 40px;
+        padding: 0 30px;
+    }
+
+}
+
+
+@media screen and (max-width: 380px) {
+
+    .header .header-text h1 {
+        font-size: 32px;
+    }
+
+    .header .header-text p {
+        font-size: 14px;    
+    }
+
+    .time-cownt h3 {
+        font-size: 36px;
+        letter-spacing: 0;
+    }
+
+    .time-cownt p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .time-cownt h2 {
+        font-size: 34px;
+    }
+
+    .donations-right h3 {
+        font-size: 26px;
+        margin-top: 30px;
+    }
+
+    .donations-right p {
+        font-size: 16px;
+    }
+
+    footer div {
+        flex-direction: column;
+        gap: 15px 20px;
+    }
+
+    .footer-list {
+        gap: 20px;
+    }
+
+    .footer-list i {
+        font-size: 25px;
+    }
+
+    .box-content {
+        font-size: 45px;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .header {
+        text-align: start;
+    }
+
+    .header .header-text h1 {
+        font-size: 28px;
+        text-align: start;
+    }
+
+    .header .header-text p {
+        font-size: 12px;  
+        line-height: 18px;  
+    }
+
+    .time-cownt h3 {
+        font-size: 30px;
+        letter-spacing: 0;
+    }
+
+    .time-cownt p {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 0 10px;
+    }
+
+    .time-cownt h2 {
+        font-size: 34px;
+    }
+
+    .donations-right h3 {
+        font-size: 26px;
+        margin-top: 30px;
+    }
+
+    .donations-right p {
+        font-size: 16px;
+    }
+
+    footer div {
+        flex-direction: column;
+        gap: 15px 20px;
+    }
+
+    .footer-list {
+        gap: 15px;
+    }
+
+    .footer-list i {
+        font-size: 20px;
+    }
+
+    .box-content {
+        font-size: 36px;
+        padding: 0;
+    }
+}
+
+/*  */
+
+html::-webkit-scrollbar {
+    width: .6rem;
+    max-height: 10vh;
+
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--gray-scroolbar);
+    border-radius: 10px;
+}
